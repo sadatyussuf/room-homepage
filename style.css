@@ -1,0 +1,126 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0.75em 0;
+    font-size: 0.77rem;
+    color: hsl(0, 0%, 0%);
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 1em;
+} 
+
+h1 {
+    padding: 0.2em;
+    font-size: 1.65rem; 
+    font-weight: 800;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+h3{
+    padding: 0.2em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+body {
+    width: 100%;
+    position: relative; 
+}
+.img-cent{
+    margin: 0.5em 0.5em 0 0.5em ;
+}
+.img-cen img {
+    width: 100%;
+    object-fit: contain;
+}
+
+header{
+position: absolute;
+top:1%;
+z-index: 1;
+width: 100%;
+
+}
+.logo{
+    display: flex;
+    flex-direction: row; 
+}
+
+.ham-btn{
+    background-color: transparent;
+    border: none;
+    margin-right: 1em;
+}
+
+.btn-angle{
+    background-color:black;
+    border: none;
+}
+
+
+
+.img-slider{
+    position: relative;
+}
+
+.slider-btns{
+    background-color: black;
+    position: absolute;
+    /* right: 2%;
+    top:90%; */
+
+    bottom: 1%;
+    right: 0;
+    z-index: 1;
+}
+
+.btn-angle{
+    width:2.5rem;
+}
+
+
+.section-wrapper {
+    text-align: center;
+    margin: 2em 1em;
+}
+
+.showNow{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    margin-top: 1.5em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 6px;
+
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0; 
+    left: 25%;
+    font-size: 0.5rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 26%, 19%);
+    }
