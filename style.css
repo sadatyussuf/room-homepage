@@ -17,10 +17,16 @@ p {
     padding: 0;
 }
 
+
+a {
+    text-decoration: none;
+    
+
+}
 p {
     margin: 0.75em 0;
     font-size: 0.77rem;
-    color: hsl(0, 0%, 0%);
+    color:  hsl(0, 0%, 27%);
     font-weight: 500;
     line-height: 1.7;
     padding: 1em;
@@ -41,6 +47,7 @@ h3{
     word-spacing: 2px;
 }
 body {
+    font-family: Spartan;
     width: 100%;
     position: relative; 
 }
@@ -57,25 +64,61 @@ position: absolute;
 top:1%;
 z-index: 1;
 width: 100%;
+/*height: 100%; change it if navbar is closed*/
 
 }
 .logo{
     display: flex;
     flex-direction: row; 
+    justify-content: space-between;
+}
+.logoSVG{
+    /* position: absolute;
+    left: 10em; */
+    margin-left: 3em;
+    width: 3rem;
+}
+
+.navbar-wrapper{
+    height: 0;
+    overflow: hidden;
+}
+.fixed{
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30vh;
+    gap: 1em; 
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* flex-flow: row nowrap; */
+    align-items: center;
+    justify-content:space-between;
+    margin-right: 1em;
+}
+
+.navbar-list li{
+    list-style-type: none;
+    font-size: 0.9rem;
+    /* margin: inherit; */
 }
 
 .ham-btn{
     background-color: transparent;
     border: none;
-    margin-right: 1em;
+    /* margin-right: 1em; */
 }
 
 .btn-angle{
     background-color:black;
     border: none;
 }
-
-
 
 .img-slider{
     position: relative;
@@ -93,7 +136,7 @@ width: 100%;
 }
 
 .btn-angle{
-    width:2.5rem;
+    width:2.1rem;
 }
 
 
@@ -118,9 +161,188 @@ width: 100%;
     position: absolute;
     bottom: 0; 
     left: 25%;
-    font-size: 0.5rem;
+    font-size: 0.01rem;
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 26%, 19%);
     }
+
+@media(min-width:760px){
+
+    a{
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+    
+    a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    a:hover:after { 
+        color: white;
+        width: 100%; 
+        left: 0; 
+    }
+
+
+.uppperContainer{
+    display: grid;
+    grid-template-columns: repeat(12 1fr);
+}
+
+.imgSlider-wrapper{
+    grid-column: 1/9;
+}
+.descSlider-wrapper{
+    grid-column: 9/12;
+}
+.lowerContainer{
+    display: flex;
+}
+
+.img-cent{
+    margin: 0;
+
+}
+
+.img-cent img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.text-flex{
+    flex-basis: 90%;
+    height: 100%;
+    width: 100%;
+}
+
+.ham-btn,.close-btn{
+    position: fixed;
+    top: -999%;
+}
+.logoSVG{
+    position: absolute;
+    top: 0.75rem;
+    left: -2rem;
+}
+
+.navbar-wrapper{
+    display: flex;
+    /* height: 100%; */
+    /* background-color: blue;  */
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    color: white;
+    width: 30vw;
+    height: 10vh;
+    gap: 0.1em;  
+    font-size: 0.8rem;
+    /* justify-content: space-between; */
+    
+}
+
+
+.slider-btns{
+    background-color: black;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 1;
+}
+
+.btn-angle{
+    width:38px;
+}
+
+    .section-wrapper{
+        margin: 0;
+        padding: 0.5em;
+        /* height: 330px; */
+    }
+
+    p {
+        margin: 0.45em 0;
+        font-size: 0.7rem;
+        padding: 0.8em;
+    } 
+    
+    h1 {
+        padding: 0.1em;
+        font-size: 1.4rem; 
+    }
+
+    .showNow{
+        display: inline-block;
+        margin-top: 1.9em;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+    }
+    h3 {
+        padding: 0.1em;
+        font-size: 1.1rem; 
+    }
+
+
+
+}
+
+
+@media(min-width: 1000px){
+    .descSlider-wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+    } 
+/* .desc-lower{
+margin-top:2rem;
+} */
+.slider-btns{
+    background-color: black;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 1;
+}
+
+.btn-angle{
+    width:38px;
+}
+p {
+    margin: 0.45em 0;
+    font-size: 1rem;
+    padding: 1em;
+} 
+
+h1 {
+    text-align: justify;
+    padding: 0.5em;
+    font-size: 1.7rem; 
+}
+
+.showNow{
+    display: inline-block;
+    margin-top: 1.9em;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+}
+h3 {
+    /* text-align: left; */
+    margin-left: 1.3em;
+    font-size: 1.2rem; 
+}
+
+}
